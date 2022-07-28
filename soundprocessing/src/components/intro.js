@@ -1,11 +1,8 @@
-
-
+import React from 'react';
 import "./intro.css";
 
 function Intro()
 {
-
-
     return(
 
             <div id="main_information">
@@ -31,7 +28,6 @@ function Intro()
                     <p>Reduce background noise that accidentally appears in your audio</p>        
                     </a>
                     </li>
-
                     <li>
                     <a href="/merge">
                     <h2>Merge file</h2>

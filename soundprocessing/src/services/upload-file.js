@@ -1,7 +1,4 @@
-
 import http from "../http-common";
-
-
 
 class UploadFilesService {
   upload(file, onUploadProgress) {

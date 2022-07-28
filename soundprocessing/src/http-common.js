@@ -1,59 +1,38 @@
 import axios from 'axios';
 
 
-
-/*
-console.log(window.location.href);
-var location='';
+let service;
 // eslint-disable-next-line
-if (String(window.location.href) == "http://localhost:3000/noisereduction")
+switch (window.location.href)
 {
-
-location='noisereduction';
-
+  case "http://localhost:3000/noisereduction":
+    service="api/audio/denoise";
+    break;
+  case "http://localhost:3000/volumeadjust":
+    service="api/audio/volume";
+    break;
+  case "http://localhost:3000/normalize":
+    service="api/audio/normalize";
+    break;
+  case "http://localhost:3000/speechtotext":
+    service="api/audio/transcribe";
+    break;
+  case "http://localhost:3000/silence":
+    service="api/audio/silence";
+    break;
+  case "http://localhost:3000/login":
+    service="api/audio/login";
+    break;
+  default:
+    break;
 }
-// eslint-disable-next-line
-else if(String(window.location.href) == "http://localhost:3000/convert")
-{
-location='convert';
-
-}
-// eslint-disable-next-line
-else if (String(window.location.href) == "http://localhost:3000/cut")
-{
-  location='cut';
-}
-// eslint-disable-next-line
-else if (String(window.location.href) == "http://localhost:3000/merge")
-{
-  location='merge';
-}
-
-// eslint-disable-next-line
-else if (String(window.location.href) == "http://localhost:3000/bassboost")
-{
-  location='bassboost';
-}
-// eslint-disable-next-line
-else if (String(window.location.href) == "http://localhost:3000/volumesetting")
-{
-  location='merge';
-}
-*/
-
-
-
-
 export default axios.create
 (
-  
   {
-
-    baseURL: 'http://127.0.0.1:8000/noisereduction',
+    baseURL: 'http://100.90.250.177:3001/'+service,
     headers: 
     {
       "Content-type": "application/json"
     }
-
-}
+  }
 );

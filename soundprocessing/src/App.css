@@ -67,3 +67,7 @@ border-bottom:solid 0.1px gray;
 article{
     padding-top:100px;
 }
+#loginicon{
+    width:30px;
+    height:30px;
+}

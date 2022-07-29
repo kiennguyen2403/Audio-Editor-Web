@@ -1,14 +1,18 @@
 import React from 'react';                                                                                                                                                                                                                                                                                                                              
-import "./tools.css";
 import Form from "./pagecomponent/form";
+import Footer from './pagecomponent/footer';
+import Header from './pagecomponent/header';
 function Normalize()
 {
 return(
-
-<article className="tools">
-<h2>Convert different types of audio files</h2>
-<Form />
-</article>
+<div>
+    <Header/>
+        <article className="tools">
+        <h2>Stabilize the sound's intensity of the audio </h2>
+        <Form />
+        </article>
+    <Footer></Footer>
+</div>
 );
 
 }

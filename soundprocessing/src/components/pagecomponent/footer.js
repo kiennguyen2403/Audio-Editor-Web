@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.css";
+
 
 
 function Footer(){
@@ -8,7 +8,7 @@ function Footer(){
         <ul id="footer">
         <div id="logo_footer">
         <li> 
-        SOUNDPROCESSOR
+        Echo
         </li>
         </div>
 

@@ -1,14 +1,18 @@
 import React from 'react';
-import "./tools.css";
 import Form from "./pagecomponent/form.js";
+import Footer from './pagecomponent/footer';
+import Header from './pagecomponent/header';
 function Speechtotext()
 {
 return(
-
-<article className="tools">
-<h2> Cut the audio file </h2> 
-<Form />
-</article>
+    <div>
+        <Header/>
+        <article className="tools">
+            <h2> Transcribe auudio files </h2> 
+            <Form />
+        </article>
+            <Footer></Footer>
+    </div>
 );
 
 }

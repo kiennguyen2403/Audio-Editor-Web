@@ -1,4 +1,4 @@
-import "./form.css";
+
 import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -103,17 +103,17 @@ export default class Form extends Component {
                     {selectedFiles && selectedFiles[0].name}
                   </div>
                 ) : (
-                  'Drag and drop file here, or click to select file'
+                 <p> 'Drag and drop file here, or click to select file'</p>
                 )}
               </div>
               <aside className="selected-file-wrapper">
-                <button
+               { <button
                   className="btn btn-success"
                   disabled={!selectedFiles}
                   onClick={this.upload}
                 >
                   Upload
-                </button>
+                </button>}
               </aside>
             </section>
           )}

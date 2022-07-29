@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-
-
+import AccesstokenState from './statemanager/accesstokenstate'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AccesstokenState>
+     <App setToken/>
+    </AccesstokenState>
   </React.StrictMode>,
   document.getElementById('root')
 );

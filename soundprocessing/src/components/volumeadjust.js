@@ -1,14 +1,18 @@
 import React from 'react';
-import "./tools.css";
 import Form from "./pagecomponent/form.js";
+import Footer from './pagecomponent/footer';
+import Header from './pagecomponent/header.js';
 function Volume()
 {
 return(
-
-<article className="tools">
-<h2>Volume adjust</h2>
-<Form content={"Boost the bass of your audio file"}/>
-</article>
+<div>
+    <Header/>
+        <article className="tools">
+        <h2>Configure the volume of the audio</h2>
+        <Form />
+        </article>
+    <Footer></Footer>
+</div>
 );
 
 }

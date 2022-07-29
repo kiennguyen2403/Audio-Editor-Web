@@ -8,7 +8,7 @@ function Volume() {
     <div>
       <Header />
       <article className="tools">
-        <h2>Configure the volume of the audio</h2>
+        <h2>Adjust volume levels of your audio files</h2>
         <Form />
       </article>
       <Footer />

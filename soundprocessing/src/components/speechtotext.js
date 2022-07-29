@@ -8,7 +8,7 @@ function Speechtotext() {
     <div>
       <Header />
       <article className="tools">
-        <h2> Transcribe auudio files </h2>
+        <h2>Produce a transcription from your audio files</h2>
         <Form />
       </article>
       <Footer />

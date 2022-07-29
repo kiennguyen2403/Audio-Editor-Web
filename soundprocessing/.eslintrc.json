@@ -28,7 +28,7 @@
     "linebreak-style": "off",
     "quotes": "off",
     "react/jsx-filename-extension": "off",
-    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    "prettier/prettier": ["warn", { "endOfLine": "auto" }]
   },
   "settings": {
     "react": {

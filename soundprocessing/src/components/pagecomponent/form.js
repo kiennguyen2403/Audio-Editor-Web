@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Dropzone from "react-dropzone";
 import "bootstrap/dist/css/bootstrap.min.css";
-import UploadFilesService from "../../services/upload-file.js";
+import UploadFilesService from "../../services/upload-file";
 
 export default class Form extends Component {
   constructor(props) {

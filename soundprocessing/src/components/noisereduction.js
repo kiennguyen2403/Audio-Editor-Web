@@ -8,7 +8,7 @@ function Noisereduction() {
     <div>
       <Header />
       <article className="tools">
-        <h2>Reduce the background noise from your audio files </h2>
+        <h2>Reduce background noise from your audio files</h2>
         <Form />
       </article>
       <Footer />

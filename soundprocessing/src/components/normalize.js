@@ -8,7 +8,7 @@ function Normalize() {
     <div>
       <Header />
       <article className="tools">
-        <h2>Stabilize the sound's intensity of the audio </h2>
+        <h2>Stabilize volume levels of your audio files</h2>
         <Form />
       </article>
       <Footer />

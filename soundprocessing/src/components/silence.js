@@ -8,7 +8,7 @@ function Silence() {
     <div>
       <Header />
       <article className="tools">
-        <h2>Remove silence moments in the audio</h2>
+        <h2>Remove long silence from your audio files</h2>
         <Form />
       </article>
       <Footer />

@@ -1,8 +1,7 @@
-
-import React, { Component } from 'react';
-import Dropzone from 'react-dropzone';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import UploadFilesService from '../../services/upload-file.js';
+import React, { Component } from "react";
+import Dropzone from "react-dropzone";
+import "bootstrap/dist/css/bootstrap.min.css";
+import UploadFilesService from "../../services/upload-file.js";
 
 export default class Form extends Component {
   constructor(props) {
@@ -14,7 +13,7 @@ export default class Form extends Component {
       selectedFiles: undefined,
       currentFile: undefined,
       progress: 0,
-      message: '',
+      message: "",
       fileInfos: [],
     };
   }
@@ -27,16 +26,14 @@ export default class Form extends Component {
     });
   }
 
-  upload() 
-  {
-    let currentFile = this.state.selectedFiles[0];
+  upload() {
+    const currentFile = this.state.selectedFiles[0];
 
     this.setState({
       progress: 0,
-      currentFile: currentFile,
-    
+      currentFile,
     });
-  
+
     UploadFilesService.upload(currentFile, (event) => {
       this.setState({
         progress: Math.round((100 * event.loaded) / event.total),
@@ -56,7 +53,7 @@ export default class Form extends Component {
       .catch(() => {
         this.setState({
           progress: 0,
-          message: 'Could not upload the file!',
+          message: "Could not upload the file!",
           currentFile: undefined,
         });
       });
@@ -86,34 +83,32 @@ export default class Form extends Component {
               aria-valuenow={progress}
               aria-valuemin="0"
               aria-valuemax="100"
-              style={{ width: progress + '%' }}   
-            >
-           
-            </div>
+              style={{ width: `${progress}%` }}
+            />
           </div>
         )}
 
         <Dropzone onDrop={this.onDrop} multiple={false}>
           {({ getRootProps, getInputProps }) => (
             <section>
-              <div {...getRootProps({ className: 'dropzone' })}>
-                <input {...getInputProps()} name="file" accept="audio/*"/>
+              <div {...getRootProps({ className: "dropzone" })}>
+                <input {...getInputProps()} name="file" accept="audio/*" />
                 {selectedFiles && selectedFiles[0].name ? (
                   <div className="selected-file">
                     {selectedFiles && selectedFiles[0].name}
                   </div>
                 ) : (
-                 <p> 'Drag and drop file here, or click to select file'</p>
+                  <p> 'Drag and drop file here, or click to select file'</p>
                 )}
               </div>
               <aside className="selected-file-wrapper">
-               { <button
+                <button
                   className="btn btn-success"
                   disabled={!selectedFiles}
                   onClick={this.upload}
                 >
                   Upload
-                </button>}
+                </button>
               </aside>
             </section>
           )}
